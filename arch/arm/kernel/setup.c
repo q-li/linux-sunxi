@@ -45,6 +45,7 @@
 #include <asm/cacheflush.h>
 #include <asm/cachetype.h>
 #include <asm/tlbflush.h>
+#include <asm/xen/hypervisor.h>
 
 #include <asm/prom.h>
 #include <asm/mach/arch.h>
@@ -967,6 +968,8 @@ void __init setup_arch(char **cmdline_p)
 		arm_pm_restart = mdesc->restart;
 
 	unflatten_device_tree();
+
+        xen_early_init();
 
 #ifdef CONFIG_SMP
 	if (is_smp())

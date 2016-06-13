@@ -79,7 +79,7 @@
 #define ACPI_SIG_MATR           "MATR"	/* Memory Address Translation Table */
 #define ACPI_SIG_MSDM           "MSDM"	/* Microsoft Data Management Table */
 #define ACPI_SIG_WPBT           "WPBT"	/* Windows Platform Binary Table */
-
+#define ACPI_SIG_XENV           "XENV"
 /*
  * All tables must be byte-packed to match the ACPI specification, since
  * the tables are provided by the system BIOS.
